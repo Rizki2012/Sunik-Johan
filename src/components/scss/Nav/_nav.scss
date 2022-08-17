@@ -1,0 +1,92 @@
+//========== Header ==========//
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--shadow);
+  transition: 0.3s ease;
+}
+.scroll-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+//========== Navbar ==========//
+.nav {
+  max-width: 1024px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav__logo {
+    &:hover {
+      color: var(--first-color);
+    }
+  }
+  .nav__link {
+    transition: 0.3s;
+    &:hover {
+      color: var(--first-color);
+    }
+  }
+  .nav__togle {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .nav__item {
+    margin-bottom: var(--mb-2);
+  }
+  .nav__link,
+  .nav__logo,
+  .nav__togle {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+  }
+  .show-menu {
+    top: var(--header-height);
+  }
+  .active-link {
+    color: var(--first-color);
+  }
+  .change-theme {
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+//========== Scroll To Top ==========//
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background: transparent;
+  border: 2px solid var(--first-color);
+  border-radius: 5rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+  .scrolltop__icon {
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+}
+
+//========== Show Scroll To Top ==========//
+.scroll-top {
+  visibility: visible;
+  bottom: 1.5rem;
+}
